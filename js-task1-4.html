@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js制作課題①－４</title>
+</head>
+<body> 
+<script>
+'use strict';
+//初期の配列
+let todolist = [
+    {todo: '机を片づける',genru:'掃除'},
+    {todo: '牛乳を買う',genru:'買い物'},
+    {todo: '散歩する',genru:'運動'}
+];
+list();
+
+//入力した値をオブジェクトにしてから配列に追加する
+let addtodo = window.prompt('タスクを入力してください');
+let addgenru = window.prompt('ジャンルを入力してください');
+let adddata = {todo: addtodo , genru: addgenru};
+todolist.push(adddata);
+
+list();
+window.alert('新しいタスクを追加しました。');
+let confi =　window.prompt('確認、追加、削除、終了のいずれかを入力してください。');
+
+//リストアップするための関数
+function list(){
+    console.log('＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝\n現在持っているタスク一覧\n＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝');
+    for(let i in todolist){
+        console.log(i + ':' + '[内容]'  + todolist[i].todo + '、' +'[ジャンル]' + todolist[i].genru);
+    };
+};
+</script>
+</body>
+</html>
