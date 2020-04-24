@@ -9,7 +9,7 @@
 <script>
 'use strict';
 //初期の配列
-let todolist = [
+const todoList = [
     {todo: '机を片づける',genru:'掃除'},
     {todo: '牛乳を買う',genru:'買い物'},
     {todo: '散歩する',genru:'運動'}
@@ -17,19 +17,19 @@ let todolist = [
 list();
 
 //入力した値をオブジェクトにしてから配列に追加する
-let addtodo = prompt('タスクを入力してください');
-let addgenru = prompt('ジャンルを入力してください');
-let adddata = {todo: addtodo , genru: addgenru};
-todolist.push(adddata);
+const addTodo = prompt('タスクを入力してください');
+const addGenru = prompt('ジャンルを入力してください');
+const addData = {todo: addTodo , genru: addGenru};
+todoList.push(addData);
 
 list();
-window.alert('新しいタスクを追加しました。');
-let confi =　prompt('確認、追加、削除、終了のいずれかを入力してください。');
+alert('新しいタスクを追加しました。');
+const confi =　prompt('確認、追加、削除、終了のいずれかを入力してください。');
 
 //リストアップするための関数
 function list(){
     console.log('＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝\n現在持っているタスク一覧\n＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝');
-    todolist.forEach(function(value , index){
+    todoList.forEach(function(value , index){
             console.log(index + ':' + '[内容]' + value.todo + '、' +'[ジャンル]' + value.genru);
         });
 };
