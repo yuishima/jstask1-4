@@ -28,10 +28,14 @@ let confi =　window.prompt('確認、追加、削除、終了のいずれかを
 
 //リストアップするための関数
 function list(){
-    console.log('＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝\n現在持っているタスク一覧\n＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝');
-    for(let i in todolist){
-        console.log(i + ':' + '[内容]'  + todolist[i].todo + '、' +'[ジャンル]' + todolist[i].genru);
-    };
+     console.log('＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝\n現在持っているタスク一覧\n＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝');
+//     for(let i in todolist){
+//         console.log(i + ':' + '[内容]'  + todolist[i].todo + '、' +'[ジャンル]' + todolist[i].genru);
+//     };
+// };
+    todolist.forEach(function(value , index){
+            console.log(index + ':' + '[内容]' + value.todo + '、' +'[ジャンル]' + value.genru);
+        });
 };
 </script>
 </body>
